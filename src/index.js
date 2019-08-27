@@ -13,7 +13,7 @@ const {addUser, getUser, getUsersInRoom, removeUser} = require('./utils/users')
 app.use(express.static(pub_dir))
 
 // will run on every client
-let welcomeMsg ='Welcome motherfucker!';
+let welcomeMsg ='Welcome!';
 io.on('connection',(socket)=>{
    // console.log('New web socket connection')
     // send to the user
