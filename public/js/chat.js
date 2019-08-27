@@ -12,27 +12,27 @@ const $sidebarTemplate = document.querySelector("#sidebar-template").innerHTML
 const {username, room} = Qs.parse(location.search,{ignoreQueryPrefix:true})
 
 const autoscroll = () =>{
-    // //get new message element
-    // const $newMessage = $messages.lastElementChild
+    //get new message element
+    const $newMessage = $messages.lastElementChild
 
-    // //Height of the last message
-    // const newMessageStyles = getComputedStyle($newMessage)
-    // const newMessageMargin = parseInt(newMessageStyles.marginBottom)
-    // const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
+    //Height of the last message
+    const newMessageStyles = getComputedStyle($newMessage)
+    const newMessageMargin = parseInt(newMessageStyles.marginBottom)
+    const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
 
-    // const visibleHeight = $messages.offsetHeight
+    const visibleHeight = $messages.offsetHeight
 
-    // // Height of the message container
-    // const containerHeight = $messages.scrollHeight
+    // Height of the message container
+    const containerHeight = $messages.scrollHeight
 
-    // //How far have I scroled
-    // const scrollOffset = $messages.scrollTop + visibleHeight
+    //How far have I scroled
+    const scrollOffset = $messages.scrollTop + visibleHeight
 
-    // // Are we at the bottom before the last message was added
-    // if(containerHeight - newMessageHeight<= scrollOffset){
+    // Are we at the bottom before the last message was added
+    if(containerHeight - newMessageHeight<= scrollOffset){
        
-    //     $messages.scrollTo = $messages.scrollHeight
-    // }
+        $messages.scrollTo = $messages.scrollHeight
+    }
 }
 
 socket.on('message', ({user='Admin',text,createdAt})=>{
