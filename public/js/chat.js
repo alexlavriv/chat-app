@@ -31,7 +31,7 @@ const autoscroll = () =>{
     // Are we at the bottom before the last message was added
     if(containerHeight - newMessageHeight<= scrollOffset){
        
-        $messages.scrollTo = $messages.scrollHeight
+        $messages.scrollTop = $messages.scrollHeight
     }
 }
 
